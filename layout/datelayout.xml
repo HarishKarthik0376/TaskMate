@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/datetextcal"
+        android:text="31/04/24"
+        android:textColor="@color/goldenyello"
+        android:textSize="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:fontFamily="@font/inter"/>
+    <View
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+
+</LinearLayout>

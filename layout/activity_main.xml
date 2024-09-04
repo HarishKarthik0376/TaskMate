@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    tools:context=".MainActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constrain2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/greetingtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/inter"
+            android:text="Good Morining,"
+            style="@style/textcolor1"
+            android:textSize="@dimen/_19sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/inter"
+            style="@style/textcolornew"
+            android:textSize="@dimen/_21sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greetingtext" />
+
+        <ImageView
+            android:id="@+id/profileicon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/blackeyy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/notificationicon"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+          style="@style/calender"
+            app:layout_constraintEnd_toEndOf="@id/profileicon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_290sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:id="@+id/cardview1"
+            android:backgroundTint="@color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileicon"
+            style="@style/strokecard"
+            app:strokeWidth="3dp">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/backgroundimg"
+    android:id="@+id/imagetochange"/>
+
+            <TextView
+                android:id="@+id/datetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_90sdp"
+                android:fontFamily="@font/inter"
+                android:text="01"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monthtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/inter"
+                android:text="June"
+                android:textColor="@color/lightyellow"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/yeartext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginTop="@dimen/_33sdp"
+                android:layout_marginEnd="@dimen/_85sdp"
+                android:fontFamily="@font/inter"
+                android:text="24"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/daytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/inter"
+                android:text="MONDAY"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/timetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_41sdp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/background_black"
+                android:textSize="35sp"
+                android:text="Time"
+                android:textStyle="bold" />
+
+        </com.google.android.material.card.MaterialCardView>
+     <com.google.android.material.card.MaterialCardView
+         android:layout_width="@dimen/_290sdp"
+         android:layout_height="@dimen/_54sdp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/cardview1"
+         android:orientation="horizontal"
+         android:id="@+id/cardview2"
+        style="@style/strokecard"
+         android:backgroundTint="@color/transparent"
+         app:strokeWidth="2dp"
+         android:layout_marginTop="15dp">
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Today's Tasks:"
+             android:textStyle="bold"
+             android:textSize="@dimen/_15sdp"
+             style="@style/textcolor8"
+             android:fontFamily="@font/inter"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:layout_marginStart="@dimen/_5sdp"/>
+
+             <TextView
+                 android:id="@+id/todaystasksnumber"
+                 style="@style/textcolor3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="37dp"
+                 android:layout_marginStart="@dimen/_5sdp"
+                 android:layout_marginTop="@dimen/_7sdp"
+                 android:fontFamily="@font/inter"
+                 android:textSize="@dimen/_15sdp"
+                 android:textStyle="bold" />
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Pending Task's:"
+                 android:textStyle="bold"
+                 android:textSize="@dimen/_15sdp"
+                 style="@style/textcolor8"
+                 android:fontFamily="@font/inter"
+                 android:layout_marginTop="@dimen/_6sdp"
+                 android:layout_marginStart="@dimen/_145sdp"/>
+
+             <TextView
+                 android:id="@+id/pendingtasksnumber"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="@dimen/_8sdp"
+                 android:layout_marginTop="@dimen/_7sdp"
+                 android:fontFamily="@font/inter"
+                 style="@style/textcolor3"
+                 android:textSize="@dimen/_15sdp"
+                 android:textStyle="bold" />
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Future Tasks:  "
+                 android:textStyle="bold"
+                 android:textSize="@dimen/_15sdp"
+                 style="@style/textcolor8"
+                 android:fontFamily="@font/inter"
+                 android:layout_marginTop="@dimen/_26sdp"
+                 android:layout_marginStart="@dimen/_6sdp"/>
+
+             <TextView
+                 android:id="@+id/futuretasksnumber"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="@dimen/_5sdp"
+                 android:layout_marginTop="@dimen/_27sdp"
+                 android:fontFamily="@font/inter"
+                 style="@style/textcolor3"
+                 android:textSize="@dimen/_15sdp"
+                 android:textStyle="bold" />
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Total Task's(All):"
+                 android:textStyle="bold"
+                 android:textSize="@dimen/_15sdp"
+                 style="@style/textcolor8"
+                 android:fontFamily="@font/inter"
+                 android:layout_marginTop="@dimen/_26sdp"
+                 android:layout_marginStart="@dimen/_145sdp"/>
+
+             <TextView
+                 android:id="@+id/totaltasknumber"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="@dimen/_3sdp"
+                 android:layout_marginTop="@dimen/_27sdp"
+                 android:fontFamily="@font/inter"
+                 style="@style/textcolor3"
+                 android:textSize="@dimen/_15sdp"
+                 android:textStyle="bold" />
+         </LinearLayout>
+
+
+
+     </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardview3"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_170sdp"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="1dp"
+                    app:rippleColor="@color/goldenyello"
+                    style="@style/strokecard2"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_140sdp"
+                        android:layout_height="@dimen/_170sdp"
+                        android:src="@drawable/goldentoday" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardview6"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="10dp"
+                    app:rippleColor="@color/white"
+                    style="@style/strokecard">
+
+                    <ImageView
+                        android:layout_width="@dimen/_140sdp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/newcompleted"/>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardview4"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="7dp"
+                    app:rippleColor="@color/white"
+                    app:strokeColor="@color/white">
+
+                    <ImageView
+                        android:layout_width="@dimen/_140sdp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:src="@drawable/goldenfuture" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardview5"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_170sdp"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="10dp"
+                    app:rippleColor="@color/lightyellow"
+                    style="@style/strokecard"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_140sdp"
+                        android:layout_height="@dimen/_170sdp"
+                        android:src="@drawable/lightgoldenyellopending" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:id="@+id/dailylinear"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout1">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_285sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp"
+                android:id="@+id/dailycard"
+                app:rippleColor="@color/white"
+                >
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_61sdp"
+                    android:src="@drawable/lightcircle">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:layout_gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:src="@drawable/time1"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Reminder's"
+                        android:textSize="@dimen/_23sdp"
+                        android:fontFamily=""
+                        android:textFontWeight="700"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:id="@+id/linear2"
+            app:layout_constraintTop_toBottomOf="@+id/dailylinear">
+
+            <ImageView
+                android:layout_width="@dimen/_85sdp"
+                android:layout_gravity="left"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/star1again"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_18sdp"
+               style="@style/textcolor2"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/inter"
+                android:text="Priority Tasks"/>
+            <ImageView
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_gravity="right"
+                android:src="@drawable/star2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/linear2"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/horizontalrecyclerview"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/visnovis"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/linear2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/goldenleafs"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority Tasks List Is Empty"
+                style="@style/textcolor3"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/inter"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
